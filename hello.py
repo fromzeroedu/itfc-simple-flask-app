@@ -7,4 +7,4 @@ def index():
 
 @app.route('/hello/<int:planet>')
 def hello(planet):
-    return 'Hello, ' + planet
+    return f'Hello, {planet}'
