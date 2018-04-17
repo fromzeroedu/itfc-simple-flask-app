@@ -5,6 +5,6 @@ app = Flask(__name__)
 def index():
     return 'Index Page'
 
-@app.route('/hello/<name>')
-def hello(name):
-    return 'Hello, ' + name
+@app.route('/hello/<int:planet>')
+def hello(planet):
+    return 'Hello, ' + planet
