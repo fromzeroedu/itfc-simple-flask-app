@@ -7,4 +7,4 @@ def index():
 
 @app.route('/hello/<int:planet>')
 def hello(planet):
-    return f'Hello, {planet}'
+    return render_template('hello.html', t_planet=planet)
