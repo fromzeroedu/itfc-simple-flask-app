@@ -5,6 +5,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/hello/<int:planet>')
+@app.route('/greeting/<int:planet>')
 def hello(planet):
     return render_template('hello.html', t_planet=planet)
