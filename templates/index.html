@@ -1,11 +1,5 @@
-<html>
-<head>
-  <title>Index Page</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}" />
-</head>
-<body>
+{% extends "base.html" %}
+
 <h1>Index Page</h1>
 
 <a href="{{ url_for('hello', planet=4) }}">Hello</a>
-</body>
-</html>
