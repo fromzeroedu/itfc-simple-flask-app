@@ -11,6 +11,7 @@ def hello(planet):
 
 @app.route('/form', methods=['GET'])
 def form():
+    import pdb; pdb.set_trace()
     first_name = request.args['first_name']
     last_name = request.args['last_name']
     return f'First Name: {first_name}, Last Name: {last_name}'
