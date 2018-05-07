@@ -11,6 +11,8 @@ def hello(planet):
 
 @app.route('/form', methods=['GET'])
 def form():
-    first_name = request.args.get('first_name')
-    last_name = request.args.get('last_name')
-    return f'First Name: {first_name}, Last Name: {last_name}'
+    if request.args.get('submit'):
+        first_name = request.args.get('first_name')
+        last_name = request.args.get('last_name')
+        return f'First Name: {first_name}, Last Name: {last_name}'
+    return render_template('form.html')
