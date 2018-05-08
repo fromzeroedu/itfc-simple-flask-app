@@ -11,7 +11,6 @@ def hello(planet):
 
 @app.route('/form', methods=['GET', 'POST'])
 def form():
-    import pdb; pdb.set_trace()
     if request.method == 'POST':
         first_name = request.form.get('first_name')
         last_name = request.form.get('last_name')
