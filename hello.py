@@ -15,7 +15,7 @@ def form():
         first_name = request.values.get('first_name')
         last_name = request.values.get('last_name')
         response = make_response(redirect(url_for('registered')))
-        response.set_cookie('first_name', 'John')
+        response.set_cookie('first_name', first_name)
         return response
     return render_template('form.html')
 
